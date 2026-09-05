@@ -1,0 +1,49 @@
+{
+  "name": "@ai-sprites/architect",
+  "version": "0.1.0",
+  "description": "独立架构角色：根据真实项目做技术决定，按需选装架构实践。",
+  "type": "module",
+  "bin": {
+    "sprite-architect": "bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "templates",
+    "skills",
+    "README.md",
+    "LICENSE",
+    "docs"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "author": "Davy Chen",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ai-sprites/architect.git"
+  },
+  "homepage": "https://github.com/ai-sprites/architect#readme",
+  "bugs": {
+    "url": "https://github.com/ai-sprites/architect/issues"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "skills",
+    "architect"
+  ],
+  "sprite": {
+    "id": "architect",
+    "role": true,
+    "practices": [
+      "sprite-architect-decisions",
+      "sprite-architect-api-design"
+    ],
+    "baseSkills": []
+  }
+}
