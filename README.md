@@ -8,25 +8,26 @@
 
 ```text
 请阅读 https://github.com/ai-sprites/architect 的 README、详细接入手册和资源清单，将 sprite-architect 接入当前项目。
-请自行识别当前客户端与项目已有约定，读取同一明确版本的资源，选择实际支持的位置和格式，保留已有规则与我的修改。默认只接入角色，实践按我的明确请求添加。
+请自行识别当前客户端与项目已有约定，读取同一明确版本的资源，选择实际支持的位置和格式，保留已有规则与我的修改。默认只接入角色，实践按我的明确请求添加；当前任务确需资料桥接时按手册自动补齐并告知我，无需再单独确认安装。
+接入时请主动确认本次角色、上游资料 host repo 和产物保存 repo/目录；已明确的不重问，只把缺项合并为一次自然语言询问，允许我回答“暂无/稍后配置”。先完成角色接入，不因业务未定阻塞；真正读取时再补所需版本、功能或文件路径。
 请完成文件放置和引用检查，再说明实际保存位置、采用版本及如何使用。只有聊天权限时先在本会话使用说明，如实说明没有写入项目；不能读取链接时再请我提供正文。
 ```
 
-**[详细接入手册](docs/installation.md)** 说明 AI 如何选择资源、识别客户端、放置文件、处理已有内容和验证结果。用户无需执行安装命令，也无需先填写初始化选项。
+**[详细接入手册](docs/installation.md)** 说明 AI 如何选择资源、识别客户端、放置文件、处理已有内容和验证结果。用户无需执行安装命令；资料位置会主动引导确认，也可稍后配置。
 
 ## 资源清单
 
-本版资源为 **v0.2.0**。角色主源独立可用；选中某项实践时，保留它的整个目录和相对引用。
+本清单对应当前阅读的仓库版本，资源链接随该页面或 checkout 的版本变化。接入时先固定为一个完整 Git 提交，再读取该提交的同批资源。历史 **v0.2.0** 仍可明确选用，但内容以该标签为准。角色主源独立可用；选中某项实践时，保留它的整个目录和相对引用。
 
 | 资源 | 用途 | 接入范围 |
 | --- | --- | --- |
-| [templates/agent.md](https://github.com/ai-sprites/architect/blob/v0.2.0/templates/agent.md) | 角色主源 | 默认接入 |
-| [skills/sprite-architect-api-design/SKILL.md](https://github.com/ai-sprites/architect/blob/v0.2.0/skills/sprite-architect-api-design/SKILL.md) | 接口设计入口 | 选中 `sprite-architect-api-design` 时一同保存 |
-| [skills/sprite-architect-api-design/references/compatibility.md](https://github.com/ai-sprites/architect/blob/v0.2.0/skills/sprite-architect-api-design/references/compatibility.md) | 接口设计配套参考 | 选中 `sprite-architect-api-design` 时一同保存 |
-| [skills/sprite-architect-api-design/references/contracts.md](https://github.com/ai-sprites/architect/blob/v0.2.0/skills/sprite-architect-api-design/references/contracts.md) | 接口设计配套参考 | 选中 `sprite-architect-api-design` 时一同保存 |
-| [skills/sprite-architect-decisions/SKILL.md](https://github.com/ai-sprites/architect/blob/v0.2.0/skills/sprite-architect-decisions/SKILL.md) | 技术决定入口 | 选中 `sprite-architect-decisions` 时一同保存 |
-| [skills/sprite-architect-decisions/references/boundaries.md](https://github.com/ai-sprites/architect/blob/v0.2.0/skills/sprite-architect-decisions/references/boundaries.md) | 技术决定配套参考 | 选中 `sprite-architect-decisions` 时一同保存 |
-| [skills/sprite-architect-decisions/references/decisions.md](https://github.com/ai-sprites/architect/blob/v0.2.0/skills/sprite-architect-decisions/references/decisions.md) | 技术决定配套参考 | 选中 `sprite-architect-decisions` 时一同保存 |
+| [templates/agent.md](templates/agent.md) | 角色主源 | 默认接入 |
+| [skills/sprite-architect-api-design/SKILL.md](skills/sprite-architect-api-design/SKILL.md) | 接口设计入口 | 选中 `sprite-architect-api-design` 时一同保存 |
+| [skills/sprite-architect-api-design/references/compatibility.md](skills/sprite-architect-api-design/references/compatibility.md) | 接口设计配套参考 | 选中 `sprite-architect-api-design` 时一同保存 |
+| [skills/sprite-architect-api-design/references/contracts.md](skills/sprite-architect-api-design/references/contracts.md) | 接口设计配套参考 | 选中 `sprite-architect-api-design` 时一同保存 |
+| [skills/sprite-architect-decisions/SKILL.md](skills/sprite-architect-decisions/SKILL.md) | 技术决定入口 | 选中 `sprite-architect-decisions` 时一同保存 |
+| [skills/sprite-architect-decisions/references/boundaries.md](skills/sprite-architect-decisions/references/boundaries.md) | 技术决定配套参考 | 选中 `sprite-architect-decisions` 时一同保存 |
+| [skills/sprite-architect-decisions/references/decisions.md](skills/sprite-architect-decisions/references/decisions.md) | 技术决定配套参考 | 选中 `sprite-architect-decisions` 时一同保存 |
 
 可以直接说：“再帮我添加 `sprite-architect-api-design`，保留整个实践目录，其他内容不动。”也可只接入实践。
 
@@ -42,8 +43,12 @@
 
 角色以当前请求和项目已有约定为依据；待确定项只影响依赖它的工作，不要求其他角色、完整 PRD 或固定流程。
 
+## 留存与交接
+
+需要跨会话或跨项目复用时，直接让 AI 把架构决定与共享契约保存到你指定的业务仓库/目录，或沿用项目已有位置，核对真实路径、依据和待确定项。已有文件优先；没有位置约定时可用 `docs/artifacts/<feature-id>/architecture.md`。角色安装目录与业务产物目录分开。
+
+角色可以自由组合；资料 host repo、版本和功能或文件由你指定，已有项目约定就沿用。当前任务确需跨 Git 读取、固定版本、比较或留存时，AI 会复用或按需补齐 artifact-bridge；普通本地资料和纯角色接入不安装它。目录、Git 与认证条件见 [产物交接说明](docs/artifact-handoff.md)。
+
 ## 后续维护
 
 需要追加、更新或移除资源时，直接说明目标。AI 对照明确版本与现有文件比较，保留自定义，只处理指定范围；具体规则见 [手册](docs/installation.md#已有内容与后续维护)。
-
-需要读取共享 Git 资料时，可单独使用 [artifact-bridge](https://github.com/ai-sprites/artifact-bridge)。
