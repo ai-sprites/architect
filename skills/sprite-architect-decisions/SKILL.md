@@ -5,7 +5,7 @@ description: "完成系统边界、共享契约、质量与迁移分析、重要
 
 # 架构与系统决定
 
-这是 Architect 的默认基础能力，也可独立使用。把当前架构问题整理成有证据、能交接的选择，实际写入用户业务目录。已有项目约定、用户选择与授权优先；安装本 Skill 不产生新技术规范，不要求其他角色、CLI 初始化、全局仓库身份或固定主机登记。
+这是 Architect 的默认基础能力，也可独立使用。把当前架构问题整理成有证据、能交接的选择，实际写入用户业务仓库的 `docs/architect/`。已有项目约定、用户选择与授权优先；安装本 Skill 不产生新技术规范，不要求其他角色、CLI 初始化、全局仓库身份或固定主机登记。
 
 ## 执行入口
 
@@ -17,19 +17,19 @@ description: "完成系统边界、共享契约、质量与迁移分析、重要
 
 ## 完整模板：何时读取与落盘
 
-下列是可直接填写的完整工作模板。触发对应工作时先完整读取该模板，再填写相关内容或更新等价现有文档；模板留在本 Skill，填写后的成果保存到用户指定业务仓库/目录。默认位置均相对**业务根目录**，已有位置（包括 `docs/ai-sdlc/`）优先。文件名中的范围标识必须是安全单段。
+下列是可直接填写的完整工作模板。触发对应工作时先完整读取该模板，再填写相关内容或更新等价现有文档；模板留在本 Skill，本角色新增或更新的架构说明、决定、图、契约设计、评审和附件统一保存在用户指定业务仓库的 `docs/architect/`。以下路径均相对**业务根目录**，可在角色目录内按功能分子目录，范围标识必须是安全单段。本次涉及的旧散落产物迁入该目录，同步文档链接、已有索引和消费引用，保留用户内容、自定义和手写修改；目标有同名文件时先比对合并，不覆盖用户内容。上游资料按真实位置读取，角色/Skill 安装资源与正常代码、测试保留各自位置。
 
-| 完整模板 | 何时读取并形成成果 | 无已有约定时的业务路径 |
+| 完整模板 | 何时读取并形成成果 | 角色目录内的业务路径 |
 |---|---|---|
-| [架构说明](assets/templates/architecture.md) | 需要交接当前/目标架构、约束、决定、共享来源和产物索引；可更新现有架构入口 | `docs/architecture.md` |
-| [探索上下文](assets/templates/architecture-discovery-context.md) | 四层业务/产品/工程/政策上下文、现状模式或关键假设需独立留存；否则把相同内容纳入架构说明 | `docs/architecture/discovery-context.md` |
-| [方案比较](assets/templates/architecture-options.md) | 存在改变边界、归属、兼容、成本或运行行为的真实竞争方向；不凑候选数 | `docs/architecture/options/<topic>.md` |
-| [ADR](assets/templates/architecture-adr.md) | 持久、跨仓、迁移、难逆选择或架构规则例外，保留实际人类决定与依据 | `docs/architecture/adrs/<number>-<topic>.md` |
-| [C4 系统上下文](assets/templates/architecture-c4-context.mmd) | 人、目标系统、外部系统或业务关系发生实质变化，需要 L1 说明 | `docs/architecture/c4-context.mmd` |
-| [C4 容器](assets/templates/architecture-c4-containers.mmd) | 实际应用/服务/存储/队列边界或关系发生实质变化，需要 L2 说明 | `docs/architecture/c4-containers.mmd` |
-| [架构模式](assets/templates/architecture-patterns.md) | 需要维护适用公共 API 基线、已采用/认真考虑的实现模式或规则例外；已有确认规范优先 | `docs/architecture/patterns.md` |
-| [质量目标](assets/templates/architecture-nfrs.md) | 有已确认可衡量目标，需记录目标/门槛、条件、方法、证据和失败信号；少量目标可合入架构说明 | `docs/architecture/nfrs.md` |
-| [风险评审](assets/templates/architecture-risk-review.md) | 多项重要失败场景需要集中评审；其他风险在对应决定或架构说明中保留同等字段 | `docs/architecture/risk-review.md` |
+| [架构说明](assets/templates/architecture.md) | 需要交接当前/目标架构、约束、决定、共享来源和产物索引；可更新现有架构入口 | `docs/architect/architecture.md` |
+| [探索上下文](assets/templates/architecture-discovery-context.md) | 四层业务/产品/工程/政策上下文、现状模式或关键假设需独立留存；否则把相同内容纳入架构说明 | `docs/architect/discovery-context.md` |
+| [方案比较](assets/templates/architecture-options.md) | 存在改变边界、归属、兼容、成本或运行行为的真实竞争方向；不凑候选数 | `docs/architect/options/<topic>.md` |
+| [ADR](assets/templates/architecture-adr.md) | 持久、跨仓、迁移、难逆选择或架构规则例外，保留实际人类决定与依据 | `docs/architect/adrs/<number>-<topic>.md` |
+| [C4 系统上下文](assets/templates/architecture-c4-context.mmd) | 人、目标系统、外部系统或业务关系发生实质变化，需要 L1 说明 | `docs/architect/c4-context.mmd` |
+| [C4 容器](assets/templates/architecture-c4-containers.mmd) | 实际应用/服务/存储/队列边界或关系发生实质变化，需要 L2 说明 | `docs/architect/c4-containers.mmd` |
+| [架构模式](assets/templates/architecture-patterns.md) | 需要维护适用公共 API 基线、已采用/认真考虑的实现模式或规则例外；已有确认规范优先 | `docs/architect/patterns.md` |
+| [质量目标](assets/templates/architecture-nfrs.md) | 有已确认可衡量目标，需记录目标/门槛、条件、方法、证据和失败信号；少量目标可合入架构说明 | `docs/architect/nfrs.md` |
+| [风险评审](assets/templates/architecture-risk-review.md) | 多项重要失败场景需要集中评审；其他风险在对应决定或架构说明中保留同等字段 | `docs/architect/risk-review.md` |
 
 模板保留完整章节、人的决定字段及专业表格字段。实际成果使用白话中文，只保留适用内容，未知项说明影响，不能编造数字、批准、系统事实或检查结果。无关内容可省略；容易误认为漏项时记录排除理由。模板链接统一使用 `[文字](<占位路径>)`；填写后必须换成相对当前文档的真实链接或权威 URL，不保留占位链接，不登记尚不存在的文件。共享契约、身份/信任、兼容、协调顺序与 ADR 只维护一处，其余文档链接。
 

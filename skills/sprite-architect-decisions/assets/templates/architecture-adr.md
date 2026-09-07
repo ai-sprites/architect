@@ -1,5 +1,7 @@
 # ADR-<NNN>：<决定标题>
 
+<!-- 填写后的成果保存到业务仓库 docs/architect/adrs/<number>-<topic>.md；功能分组和附件也在 docs/architect/ 内，链接相对本文档。 -->
+
 **状态：** <Proposed / Accepted / Rejected / Superseded>
 **日期：** <YYYY-MM-DD>
 **决定负责人：** <实际的人类负责人>

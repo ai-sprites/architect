@@ -1,5 +1,7 @@
 # 架构模式：<系统或范围>
 
+<!-- 填写后的成果保存到业务仓库 docs/architect/patterns.md；功能分组和附件也在 docs/architect/ 内，链接相对本文档。 -->
+
 **更新日期：** <YYYY-MM-DD>
 **权威 OpenAPI YAML：** [OpenAPI YAML](<repository-relative-path-or-authoritative-url>)
 

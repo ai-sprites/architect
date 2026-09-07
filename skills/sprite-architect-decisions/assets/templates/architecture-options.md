@@ -1,5 +1,7 @@
 # 架构方案比较：<决定主题>
 
+<!-- 填写后的成果保存到业务仓库 docs/architect/options/<topic>.md；功能分组和附件也在 docs/architect/ 内，链接相对本文档。 -->
+
 **问题：** <架构问题>
 **上下文：** [上下文或依据](<context-relative-path-or-authoritative-url>)
 

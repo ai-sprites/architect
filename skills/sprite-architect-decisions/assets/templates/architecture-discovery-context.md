@@ -1,5 +1,7 @@
 # 架构探索上下文：<系统或主题>
 
+<!-- 填写后的成果保存到业务仓库 docs/architect/discovery-context.md；功能分组和附件也在 docs/architect/ 内，链接相对本文档。 -->
+
 **更新日期：** <YYYY-MM-DD>
 **依据来源：** <真实链接、路径或当前用户请求>
 
