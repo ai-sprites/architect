@@ -1,0 +1,21 @@
+C4Container
+title <系统名称>的容器视图
+
+%% 仅在有助于解释关系时添加人和外部系统。
+%% Person(user, "<用户>", "<此人为何使用本系统>")
+%% System_Ext(external, "<外部系统>", "<外部系统职责>")
+
+System_Boundary(boundary, "<目标系统>") {
+  Container(container, "<应用或服务>", "<技术>", "<职责>")
+  %% Container(client, "<前端>", "<技术>", "<职责>")
+  %% ContainerDb(store, "<数据存储>", "<技术>", "<数据职责>")
+  %% ContainerQueue(queue, "<队列>", "<技术>", "<职责>")
+}
+
+%% 仅添加有证据支持的关系。
+%% Rel(user, client, "<业务动作>", "HTTPS")
+%% Rel(client, container, "<RESTful API 用途>", "HTTPS/JSON")
+%% Rel(container, store, "<读取或写入>", "<协议>")
+%% Rel(container, external, "<用途>", "<协议>")
+
+%% 此视图保持 C4 L2 层次，不加入副本、负载均衡器或部署节点。
