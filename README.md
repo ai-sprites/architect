@@ -1,6 +1,6 @@
 # architect
 
-独立架构角色：根据真实项目做技术决定，工作流与完整架构模板由配套 Skill 提供。
+独立架构角色：根据真实项目确定系统边界、共享契约和重要架构取舍，工作流与完整架构模板由配套 Skill 提供。
 
 ## 复制到 AI 聊天
 
@@ -35,14 +35,10 @@
 | [skills/sprite-architect-decisions/assets/templates/architecture-patterns.md](skills/sprite-architect-decisions/assets/templates/architecture-patterns.md) | 完整产物模板 | 随角色默认完整接入 |
 | [skills/sprite-architect-decisions/assets/templates/architecture-risk-review.md](skills/sprite-architect-decisions/assets/templates/architecture-risk-review.md) | 完整产物模板 | 随角色默认完整接入 |
 | [skills/sprite-architect-decisions/assets/templates/architecture.md](skills/sprite-architect-decisions/assets/templates/architecture.md) | 完整产物模板 | 随角色默认完整接入 |
-| [skills/sprite-architect-decisions/assets/templates/technology-profile-backend.md](skills/sprite-architect-decisions/assets/templates/technology-profile-backend.md) | 完整产物模板 | 随角色默认完整接入 |
-| [skills/sprite-architect-decisions/assets/templates/technology-profile-frontend.md](skills/sprite-architect-decisions/assets/templates/technology-profile-frontend.md) | 完整产物模板 | 随角色默认完整接入 |
-| [skills/sprite-architect-decisions/assets/templates/technology-profile.md](skills/sprite-architect-decisions/assets/templates/technology-profile.md) | 完整产物模板 | 随角色默认完整接入 |
 | [skills/sprite-architect-decisions/references/architecture-work.md](skills/sprite-architect-decisions/references/architecture-work.md) | 工作流与专业参考 | 随角色默认完整接入 |
 | [skills/sprite-architect-decisions/references/boundaries.md](skills/sprite-architect-decisions/references/boundaries.md) | 工作流与专业参考 | 随角色默认完整接入 |
 | [skills/sprite-architect-decisions/references/collaboration-and-handoff.md](skills/sprite-architect-decisions/references/collaboration-and-handoff.md) | 工作流与专业参考 | 随角色默认完整接入 |
 | [skills/sprite-architect-decisions/references/decisions.md](skills/sprite-architect-decisions/references/decisions.md) | 工作流与专业参考 | 随角色默认完整接入 |
-| [skills/sprite-architect-decisions/references/technology-planning.md](skills/sprite-architect-decisions/references/technology-planning.md) | 工作流与专业参考 | 随角色默认完整接入 |
 
 可以直接说：“再帮我添加 `sprite-architect-api-design`，保留整个实践目录，其他内容不动。”也可只接入实践。
 
@@ -52,15 +48,17 @@
 
 完成接入后，直接向 AI 描述任务，例如：
 
-> 请用 sprite-architect，先读现有系统和本次需求，只处理这次实现需要的技术决定，写清依据、影响和待确定项。
+> 请用 sprite-architect，先读现有系统和本次需求，只处理这次实现需要的系统边界、共享契约和架构取舍，写清依据、影响和待确定项。
 
 客户端没有自动加载时，让 AI 先读取保存的角色文件或 Skill 入口。读取说明、写入项目和启动原生子代理是不同结果，按实际完成情况判断。
 
 角色以当前请求和项目已有约定为依据；待确定项只影响依赖它的工作，不要求其他角色、完整 PRD 或固定流程。
 
+具体语言、框架、库和构建工具由开发角色在已授权的开发范围内选择，沿用项目已有约定；架构师交付必要约束，不先替开发逐项定技术栈。
+
 ## 留存与交接
 
-架构任务交付技术方案、边界与契约，并保存重要选择的决定记录；写清已确认内容、方案状态、取舍、质量目标和验证依据。 内容详略随任务调整，沿用已有文档；小型答疑不强建空文档。产物实际保存到你指定的业务仓库/目录，并给出真实链接。已有文件优先；没有位置约定时可用 `docs/architecture.md`。角色安装目录与业务产物目录分开。
+架构任务交付系统方案、边界与契约，并保存重要选择的决定记录；写清已确认内容、方案状态、取舍、质量目标和验证依据。 内容详略随任务调整，沿用已有文档；小型答疑不强建空文档。产物实际保存到你指定的业务仓库/目录，并给出真实链接。已有文件优先；没有位置约定时可用 `docs/architecture.md`。角色安装目录与业务产物目录分开。
 
 角色可以自由组合；资料 host repo、版本和功能或文件由你指定，已有项目约定就沿用。当前任务确需跨 Git 读取、固定版本、比较或留存时，AI 会复用或按需补齐 artifact-bridge；普通本地资料和纯角色接入不安装它。目录、Git 与认证条件见 [产物交接说明](docs/artifact-handoff.md)。
 
